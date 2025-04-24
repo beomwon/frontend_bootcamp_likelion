@@ -1,0 +1,3 @@
+degit은 복사할수 있게 해줌
+
+degit seulbinim/resources/figma figma
