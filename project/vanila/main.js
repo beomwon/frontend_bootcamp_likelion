@@ -1,3 +1,3 @@
 function greet() {
-  alert("멋사 부트캠프 화이팅!");
+  alert("눌러주셔서 감사합니다.");
 }
