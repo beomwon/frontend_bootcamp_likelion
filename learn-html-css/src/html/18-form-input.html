@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>폼(input) 요소</title>
+    <link rel="shortcut icon" href="/public/favicon/bootCamp.ico" type="image/x-icon" />
+    <link rel="icon" href="/public/favicon/bootCamp.svg" type="image/svg" />
+    <link rel="preload" as="font" href="/public/font/suit/SUIT-Variable.woff2" />
+    <link rel="stylesheet" href="/public/font/suit/SUIT-Variable.css" />
+    <style>
+      body {
+        font-family: 'SUIT Variable', sans-serif;
+      }
+    </style>
+  </head>
+  <body style="font-size: 36px">
+    <a href="/index.html">메인 페이지 이동</a>
+    <br />
+    <!-- 한줄 글상자(search) - 검색어 입력서식 -->
+    <!-- text : 텍스트상자 -->
+    <!-- search : 검색어 상자 -->
+    <!-- 폼 관련 요소는 모두 1대1로 대응되는 레이블을 가져야함. -->
+    <!-- **id에 따라서 자동완성속성이 달라짐** -->
+    <h1>폼(input) 요소</h1>
+    <form action="https://formspree.io/f/xeqwwbwk" method="POST">
+      <div>
+        <label for="userName">이름</label>
+        <input type="text" id="userName" required />
+        <!-- 필수요소 required -->
+      </div>
+      <div>
+        <label for="email">email</label>
+        <input type="email" id="email" required />
+      </div>
+      <div>
+        <label for="password">비밀번호</label>
+        <input type="text" id="password" />
+      </div>
+      <div>
+        <label for="searchKeyward">검색어</label>
+        <input type="text" id="searchKeyward" placeholder="검색어를 입력하세요" />
+      </div>
+      <!-- tel: 전화번호 입력 서식 -->
+      <div>
+        <label for="phoneNumber">전화번호</label>
+        <input type="tel" id="phoneNumber" placeholder="010-1234-5678" />
+      </div>
+      <!-- url: URL 입력 서식 -->
+      <div>
+        <label for="url">URL</label>
+        <input type="url" id="url" placeholder="https://www.example.com" />
+      </div>
+      <!-- date: 날짜 입력 서식 -->
+      <div>
+        <label for="date">날짜</label>
+        <input type="date" id="date" />
+      </div>
+      <!-- time: 시간 입력 서식 -->
+      <div>
+        <label for="time">시간</label>
+        <input type="time" id="time" />
+      </div>
+      <!-- datetime-local: 날짜와 시간 입력 서식 -->
+      <div>
+        <label for="datetime-local">날짜와 시간</label>
+        <input type="datetime-local" id="datetime-local" />
+      </div>
+      <!-- month: 월 입력 서식 -->
+      <div>
+        <label for="month">월</label>
+        <input type="month" id="month" />
+      </div>
+      <!-- week: 주 입력 서식 -->
+      <div>
+        <label for="week">주</label>
+        <input type="week" id="week" />
+      </div>
+      <!-- number: 숫자 입력 서식 -->
+      <div>
+        <label for="number">숫자</label>
+        <input type="number" id="number" min="0" max="100" step="1" />
+      </div>
+      <!-- range: 범위 입력 서식 -->
+      <div>
+        <label for="range">범위</label>
+        <input type="range" id="range" min="0" max="100" step="1" />
+      </div>
+      <!-- color: 색상 입력 서식 -->
+      <div>
+        <label for="color">색상</label>
+        <input type="color" id="color" />
+      </div>
+
+      <!-- 체크박스(여러개 선택 가능) -->
+      <div>
+        <input type="checkbox" checked value="html" id="bootCampHtml" name="bootCampHtml" />
+        <label for="bootCampHtml">HTML</label>
+      </div>
+      <div>
+        <input type="checkbox" value="css" id="bootCampCss" name="bootCampCss" />
+        <label for="bootCampCss">CSS</label>
+      </div>
+      <!-- radio : 라디오 서식 (여러개 중 1개 선택 가능) -->
+      <div>
+        <label>
+          <input type="radio" checked value="html" value="bootCampHtmlRadio" name="bootCampRadio" />
+          HTML
+        </label>
+      </div>
+      <div>
+        <label>
+          <input type="radio" value="css" value="bootCampCssRadio" name="bootCampRadio" />
+          CSS
+        </label>
+      </div>
+      <!-- 버튼(전송, 초기화, 일반버튼) -->
+      <div>
+        <input type="submit" value="전송" />
+        <input type="reset" value="초기화" />
+        <input type="button" value="일반버튼" onclick="alert('일반버튼 클릭!')" />
+      </div>
+    </form>
+  </body>
+</html>
