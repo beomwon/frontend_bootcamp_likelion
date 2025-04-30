@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="shortcut icon" href="/public/favicon/likelion.ico" type="image/x-icon" />
+    <link rel="icon" href="/public/favicon/likelion.svg" type="image/svg" />
+    <link rel="preload" as="font" href="/public/font/suit/SUIT-Variable.woff2" />
+    <link rel="stylesheet" href="/public/font/suit/SUIT-Variable.css" />
+    <style>
+      body {
+        font-family: 'SUIT Variable', sans-serif;
+      }
+    </style>
+  </head>
+  <body style="font-size: 20px">
+    <h1>script 요소</h1>
+    <a href="/index.html">메인 페이지 이동</a>
+    <br />
+    <noscript>자바스크립트를 지원하는 환경에서 카드 뒤집기를 실행할 수 있습니다.</noscript>
+    <link rel="stylesheet" href="/src/html/styles/23-script.css" />
+    <script type="module" src="/src/html/js/23-script.js"></script>
+    <button type="button" class="flip-button">카드 뒤집기</button>
+    <div class="card-wrapper">
+      <div class="card">
+        <div class="card-face card-face-black"></div>
+        <div class="card-face card-face-white"></div>
+      </div>
+    </div>
+  </body>
+</html>
