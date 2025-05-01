@@ -1,0 +1,44 @@
+/* 상속, 겹침, 우선순위 */
+
+/* 1. 상속 */
+.wrapper {
+  color: green;
+  border: 1px solid red;
+}
+
+/* inherit 상위 요소의 border 속성 상속 */
+/* .wrapper p {
+  color: blue;
+  font-size: 20px;
+  font-weight: bold;
+  border: inherit; 
+} */
+
+/* 2. 겹침 */
+body {
+  color: red;
+}
+
+.wrapper {
+  color: purple;
+}
+
+p.ai {
+  color: purple;
+}
+
+.copilot {
+  color: blue;
+}
+
+p {
+  color: gray;
+}
+
+p {
+  color: orange;
+}
+
+p {
+  color: pink !important;
+}
