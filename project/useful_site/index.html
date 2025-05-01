@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VSCode Snippet Generator</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        background: #1e1e1e;
+        color: #f5f5f5;
+        margin: 0;
+        padding: 2rem;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: auto;
+        background: #252526;
+        padding: 2rem;
+        border-radius: 1rem;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      }
+
+      .form-group {
+        position: relative;
+        margin-top: 2rem;
+      }
+
+      .form-group input,
+      .form-group textarea {
+        width: 100%;
+        padding: 1.2rem 0.8rem 0.5rem;
+        font-size: 1rem;
+        border: 1px solid #555;
+        border-radius: 0.5rem;
+        background: #333;
+        color: #f5f5f5;
+        box-sizing: border-box;
+      }
+
+      .form-group label {
+        position: absolute;
+        top: 0.8rem;
+        left: 0.8rem;
+        font-size: 1rem;
+        color: #aaa;
+        pointer-events: none;
+        transition: all 0.2s ease;
+        background: #333;
+        padding: 0 0.3rem;
+      }
+
+      .form-group input:focus + label,
+      .form-group input:not(:placeholder-shown) + label,
+      .form-group textarea:focus + label,
+      .form-group textarea:not(:placeholder-shown) + label {
+        top: -0.6rem;
+        left: 0.6rem;
+        font-size: 0.8rem;
+        color: #ffffff;
+      }
+
+      textarea {
+        resize: none;
+        height: 200px;
+      }
+      /* Chrome, Safari */
+      textarea::-webkit-scrollbar {
+        width: 8px;
+      }
+      textarea::-webkit-scrollbar-track {
+        background: transparent; /* 트랙 배경 제거 */
+      }
+      textarea::-webkit-scrollbar-thumb {
+        background-color: #aaa; /* 핸들 색상 */
+        border-radius: 4px;
+      }
+
+      pre {
+        background: #1e1e1e;
+        color: #d4d4d4;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        max-height: 300px;
+        overflow-y: auto;
+        white-space: pre-wrap;
+        word-break: break-word;
+        margin-top: 2rem;
+
+        /* 스크롤바 숨기기/스타일 커스터마이징 */
+        scrollbar-width: thin;
+        scrollbar-color: #aaa transparent;
+      }
+
+      /* Chrome, Safari */
+      pre::-webkit-scrollbar {
+        width: 8px;
+      }
+      pre::-webkit-scrollbar-track {
+        background: transparent;
+        margin-top: 2px;
+        margin-bottom: 2px;
+        border-radius: 8px;
+      }
+      pre::-webkit-scrollbar-thumb {
+        background-color: rgb(94, 94, 94);
+        border-radius: 4px;
+
+        /* 왼쪽으로 밀어 보이는 효과: box-shadow로 오른쪽 여백 */
+        box-shadow: inset -2px 0 0 0 #1e1e1e;
+      }
+
+      button {
+        margin-top: 1rem;
+        background: #007acc;
+        color: white;
+        border: none;
+        cursor: pointer;
+        padding: 0.8rem;
+        font-size: 1rem;
+        border-radius: 0.5rem;
+        width: 100%;
+        transition: background 0.3s;
+      }
+
+      button:hover {
+        background: #005f99;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>VSCode Snippet Generator</h1>
+
+      <div class="form-group">
+        <input id="desc" placeholder=" " oninput="generateSnippet()" />
+        <label for="desc">Description</label>
+      </div>
+
+      <div class="form-group">
+        <input id="prefix" placeholder=" " oninput="generateSnippet()" />
+        <label for="prefix">Prefix (tab trigger)</label>
+      </div>
+
+      <div class="form-group">
+        <textarea
+          id="body"
+          placeholder=" "
+          oninput="generateSnippet()"
+        ></textarea>
+        <label for="body">Snippet Body (multiline)</label>
+      </div>
+
+      <pre><code id="output"></code></pre>
+      <button onclick="copySnippet()">Copy to Clipboard</button>
+    </div>
+
+    <script>
+      function generateSnippet() {
+        const descInput = document.getElementById("desc");
+        const prefixInput = document.getElementById("prefix");
+        const bodyInput = document.getElementById("body");
+        const output = document.getElementById("output");
+
+        const description = descInput.value.trim() || "exampleSnippet";
+        const prefix = prefixInput.value.trim() || "ex";
+        const bodyRaw = bodyInput.value || "console.log('$1');";
+        const bodyLines = bodyRaw.split("\n");
+
+        const snippetContent = {
+          prefix: prefix,
+          body: bodyLines,
+          description: description,
+        };
+
+        let snippetString = JSON.stringify(snippetContent, null, 2);
+        snippetString = `"${description}": ${snippetString},`;
+        output.innerText = snippetString;
+      }
+
+      window.addEventListener("DOMContentLoaded", generateSnippet);
+
+      function copySnippet() {
+        const text = document.getElementById("output").innerText;
+        const button = document.querySelector("button");
+        navigator.clipboard
+          .writeText(text)
+          .then(() => {
+            const originalText = button.innerText;
+            button.innerText = "Copied!";
+            button.disabled = true;
+
+            setTimeout(() => {
+              button.innerText = originalText;
+              button.disabled = false;
+            }, 3000);
+          })
+          .catch((err) => {
+            console.error("복사 실패", err);
+          });
+      }
+    </script>
+  </body>
+</html>
