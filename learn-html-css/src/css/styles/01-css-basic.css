@@ -1,0 +1,10 @@
+/* 제목 요소에 글자 크기 지정하기 */
+body {
+  background-color: hsla(hue, saturation, lightness, alpha);
+}
+h1 {
+  font-size: small;
+  border-width: 10px;
+  border-style: solid;
+  border-color: currentColor;
+}
