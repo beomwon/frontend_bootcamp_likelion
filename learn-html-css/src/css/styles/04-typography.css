@@ -1,1 +1,43 @@
 /* 타이포그래피 및 단위 */
+/* em - 현재크기를 상속받아서 비례 */
+@import '/src/common/mini-reset.css';
+
+.lion {
+  font-size: 20px;
+  .like {
+    font-size: 1.5em;
+  }
+}
+
+.bootcamp {
+  font-size: 20px;
+  .like {
+    font-size: 2em;
+  }
+}
+
+/* rem - root를 상속받아서 비례 */
+.like {
+  font-size: 1.5rem;
+}
+
+.school {
+  font-weight: 700;
+  font-size: 2rem;
+  .like {
+    font-size: 5vw;
+    color: green;
+  }
+}
+
+html {
+  font-size: 10px;
+
+  @media (min-width: 600px) {
+    font-size: 20px;
+  }
+
+  @media (min-width: 1200px) {
+    font-size: 30px;
+  }
+}
