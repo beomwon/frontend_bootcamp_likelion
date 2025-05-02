@@ -1,10 +1,13 @@
 /* 박스모델 */
 /* block box */
 /* border 스타일링 */
+/* padding 여백(안쪽) 스타일링 */
+/* box-sizing 설정 */
 .lion {
   background-color: #ffc;
   border: 1px solid #333;
-
+  padding: 10px;
+  width: 500px;
   span {
     background-color: #fcf;
     display: block;
@@ -25,4 +28,27 @@
   background-color: #cfc;
   display: inline-block;
   width: 300px;
+}
+
+/* margin 여백 (바깥쪽) */
+/* margin 여백은 기본적으로 auto 설정이 가능하다. */
+
+.school {
+  border: 1px solid orange;
+  margin: 10px;
+}
+
+/* overflow 속성을 활용한 스타일링 */
+/* overflow 속성은 박스의 크기를 넘는 내용이 있을 때 어떻게 처리할 것인지 설정하는 속성이다. */
+/* overflow: hidden; : 넘치는 내용을 숨김 */
+/* overflow: scroll; : 넘치는 내용에 스크롤바를 추가함 */
+/* overflow: auto; : 넘치는 내용에 스크롤바를 추가하되, 필요할 때만 추가함 */
+/* overflow: visible; : 넘치는 내용을 보이게 함 (기본값) */
+
+.techit {
+  border: 1px solid green;
+  padding: 10px;
+  margin: 10px;
+  height: 150px;
+  overflow: auto;
 }
