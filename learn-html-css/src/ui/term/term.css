@@ -87,3 +87,146 @@
     left: 0;
   }
 }
+
+.container {
+  width: 250px;
+  padding: 16px;
+  background: #ccc;
+  border-radius: 5px;
+  position: relative;
+  font-family: 'Pretendard', serif;
+
+  .title {
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+    padding-bottom: 16px;
+  }
+
+  .subject {
+    color: #296897;
+    font-size: 0.875rem; /* 14px */
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%; /* 22.5px */
+    padding-bottom: 4px;
+  }
+
+  .brief {
+    margin: 0;
+    font-size: 0.875rem; /* 14px */
+    line-height: 1.5;
+    color: #181818;
+    font-weight: 300;
+    width: 142px;
+  }
+
+  .left {
+    position: relative;
+    margin-bottom: 12px;
+
+    .left-text-box {
+      margin-left: 76px;
+      font-size: 0.875rem; /* 14px */
+      line-height: 1.5;
+      color: #181818;
+    }
+
+    .left-thumbnail {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  .right {
+    position: relative;
+
+    .right-text-box {
+      margin-right: 76px;
+      font-size: 0.875rem; /* 14px */
+      line-height: 1.5;
+      color: #181818;
+    }
+
+    .right-thumbnail {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+}
+.term-section {
+  background: #ccc linear-gradient(#ccc, #eee);
+  border: 1px solid #555;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  width: 16.25rem;
+
+  .term {
+    padding-left: 76px;
+    position: relative;
+    min-height: 68px;
+
+    em {
+      color: #296897;
+      font-size: 0.875rem;
+      font-weight: 700;
+      line-height: 1.5;
+    }
+
+    p {
+      font-size: 0.875rem;
+      line-height: 1.5;
+      color: #181818;
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  .term {
+    padding-left: 76px;
+    position: relative;
+    min-height: 68px;
+    background: None;
+    em {
+      color: #296897;
+      font-size: 0.875rem;
+      font-weight: 700;
+      line-height: 1.5;
+    }
+
+    p {
+      font-size: 0.875rem;
+      line-height: 1.5;
+      color: #181818;
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+  h2 {
+    font-size: 1rem;
+  }
+
+  .term {
+    margin-top: 1rem;
+
+    &:nth-of-type(even) {
+      padding-inline: 0 68px;
+
+      img {
+        left: initial;
+        right: 0;
+      }
+    }
+  }
+}
