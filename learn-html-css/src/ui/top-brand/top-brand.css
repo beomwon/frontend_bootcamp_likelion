@@ -1,0 +1,67 @@
+/* float 레이아웃 */
+body {
+  margin: 50px;
+}
+
+.top-brand-section {
+  padding-top: 36px;
+  padding-bottom: 36px;
+  h2 {
+    padding-bottom: 28px;
+    span {
+      display: block;
+      font-size: 21px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 5px;
+    }
+    .korea-title {
+      font-size: 16px;
+      font-weight: 400;
+      color: #666;
+      margin: 0;
+    }
+  }
+
+  ul {
+    width: calc((228px + 20px) * 5);
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  li {
+    padding-right: 20px;
+  }
+}
+
+.top-brand-item {
+  width: 228px;
+  height: 128px;
+  margin-bottom: 12px;
+  div {
+    background: #eee;
+    border-radius: 8px;
+  }
+
+  img {
+    /* auto-margin으로 가운데 정렬 트릭 */
+    margin-inline: auto;
+    /* border: 1px solid red; */
+  }
+
+  figcaption {
+    /* background: yellow; */
+    padding-top: 8px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 400;
+    color: #000000;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}

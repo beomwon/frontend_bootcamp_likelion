@@ -1,0 +1,68 @@
+body {
+  margin: 50px;
+  background: lightgray;
+}
+h1 {
+  margin-bottom: 20px;
+}
+.notification-item {
+  position: relative;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 0px 2px 0px rgba(114, 119, 124, 0.2);
+  font-family: 'SUIT Variable';
+  font-style: normal;
+
+  width: 332px;
+  height: 84px;
+  display: flex;
+  align-items: center;
+
+  .contents {
+    width: 292px;
+  }
+  picture {
+    position: absolute;
+    display: flex;
+  }
+  .pot {
+    color: var(--green-300, #22be61);
+  }
+  .rice {
+    color: var(--orange-200, #e39042);
+  }
+  .title {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: normal;
+  }
+  .title-box {
+    margin-left: 40px;
+    position: relative;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 4px;
+  }
+  .time {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 12px;
+    font-weight: 400;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .description {
+    color: var(--gray-200, #9b9a90);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
+
+li {
+  list-style: none;
+  margin-bottom: 7px;
+}

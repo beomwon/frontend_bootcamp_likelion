@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notification</title>
+    <link rel="shortcut icon" href="/public/favicon/likelion.ico" type="image/x-icon" />
+    <link rel="icon" href="/public/favicon/likelion.svg" type="image/svg" />
+    <link rel="preload" as="font" href="/public/font/suit/SUIT-Variable.woff2" />
+    <link rel="stylesheet" href="/public/font/suit/SUIT-Variable.css" />
+    <link rel="stylesheet" href="/src/common/index.css" />
+    <link rel="stylesheet" href="/src/ui/notification/notification.css" />
+  </head>
+  <body>
+    <a href="/index.html">메인 페이지 이동</a>
+    <br />
+    <h1>Notification</h1>
+
+    <section class="notification-section">
+      <ul class="notification-list">
+        <li>
+          <figure class="notification-item">
+            <picture>
+              <source srcset="/src/assets/svg/pot.svg" type="image/webp" />
+              <img src="/src/assets/svg/pot.png" alt="" />
+            </picture>
+            <figurecaption class="contents">
+              <div class="title-box">
+                <div class="pot">
+                  <span class="title">알림 제목</span>
+                  <span class="time">0분</span>
+                </div>
+                <div class="description">사용자에게 알릴 내용을 작성합니다.</div>
+              </div>
+            </figurecaption>
+          </figure>
+        </li>
+        <li>
+          <figure class="notification-item">
+            <picture>
+              <source srcset="/src/assets/svg/rice.svg" type="image/webp" />
+              <img src="/src/assets/svg/rice.png" alt="" />
+            </picture>
+            <figurecaption class="contents">
+              <div class="title-box">
+                <div class="rice">
+                  <span class="title">알림 제목</span>
+                  <span class="time">0분</span>
+                </div>
+                <div class="description">사용자에게 알릴 내용을 작성합니다.</div>
+              </div>
+            </figurecaption>
+          </figure>
+        </li>
+      </ul>
+    </section>
+  </body>
+</html>
