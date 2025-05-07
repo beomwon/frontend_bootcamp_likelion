@@ -1,0 +1,47 @@
+/* p.lion:nth-child(4) {
+  border: 1px solid green;
+  background-color: rgb(255 255 80 / 0.5);
+  position: relative;
+  left: 100px;
+  top: 50px;
+} */
+
+/* p.lion:nth-of-type(2) {
+  border: 1px solid green;
+  background-color: rgb(255 255 80 / 0.5);
+  position: relative;
+  left: 100px;
+  top: 50px;
+} */
+
+/* relative 값 */
+.like {
+  background-color: black;
+  p {
+    border: 1px solid red;
+    background-color: rgb(255 255 80 / 0.8);
+    position: relative;
+    bottom: 20px;
+    right: 10px;
+  }
+}
+
+/* fixed 값 */
+h1 {
+  background-color: pink;
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+}
+
+.bootcamp {
+  border: 1px solid blue;
+  position: relative;
+  span {
+    background-color: rgb(100 255 30 / 0.5);
+    border: 1px solid black;
+    position: absolute;
+    top: 20px;
+    left: 0;
+  }
+}

@@ -1,0 +1,63 @@
+/* 일반 CSS */
+.parent {
+  background-color: #f4a261;
+  padding: 20px;
+}
+
+.parent .child {
+  color: white;
+  font-size: 16px;
+}
+
+/* CSS 중첩 */
+.parent {
+  background-color: #f4a261;
+  padding: 20px;
+
+  .child {
+    color: white;
+    font-size: 16px;
+  }
+}
+
+.button {
+  color: red;
+
+  &:hover {
+    background-color: yellow;
+  }
+
+  &::before {
+    content: '콘텐츠';
+  }
+}
+
+/* 일반 CSS - 미디어쿼리 예시 */
+.container {
+  width: 100%;
+  padding: 20px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/* 중첩 CSS - 미디어쿼리 예시 */
+.container {
+  width: 100%;
+  padding: 20px;
+
+  @media (min-width: 768px) {
+    width: 750px;
+  }
+}
+
+/* Sass와의 차이점 */
+/* 아래와 같이 &기호를 부모 요소의 이름의 일부로 치환할 수 있다. */
+.menu_list {
+  &__item {
+    color: green;
+  }
+}
