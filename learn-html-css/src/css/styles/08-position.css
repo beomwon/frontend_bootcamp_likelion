@@ -45,3 +45,9 @@ h1 {
     left: 0;
   }
 }
+
+.frontend {
+  background: var(--mint);
+  position: sticky;
+  top: 0;
+}
