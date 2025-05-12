@@ -18,16 +18,63 @@ div {
 }
 /* flex를 활용할 경우 */
 .lion {
-  inline-size: 400px;
+  inline-size: 500px;
+  block-size: 200px;
   margin-block: 20px;
   box-shadow: 0 0 0 10px red;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-
+  flex-flow: row wrap;
+  /* flex-direction: row;
+  flex-wrap: wrap; */
+  /* 메인 축 정렬 */
+  /* justify-content: space-evenly; */
+  /* 교차 축 정렬 */
+  align-items: center;
+  /* 여러 줄 정렬 (교차) */
+  align-content: space-around;
   .lion-item {
-    inline-size: 150px;
-    /* background: yellow; */
+    /* inline-size: 100px; */
+    block-size: 80px;
+    flex-basis: 150px;
+    /* flex-grow: 1; */
+  }
+  .lion-item:nth-child(4) {
+    /* flex-grow: 1; */
+  }
+}
+
+.frontend {
+  margin-block: 20px;
+  box-shadow: 0 0 0 10px gray;
+  inline-size: 500px;
+  block-size: 200px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: start;
+  align-items: baseline;
+  column-gap: 20px;
+  .frontend-item {
+    inline-size: 100px;
+    font-size: 12px;
+  }
+  .frontend-item:nth-child(1) {
+    align-self: start;
+    block-size: 20px;
+    font-size: 12px;
+    order: 9999;
+  }
+  .frontend-item:nth-child(2) {
+    block-size: 40px;
+    font-size: 20px;
+  }
+  .frontend-item:nth-child(3) {
+    block-size: 60px;
+    font-size: 30px;
+  }
+  .frontend-item:nth-child(4) {
+    block-size: 80px;
+    font-size: 40px;
+    order: -1;
   }
 }
 
@@ -40,4 +87,15 @@ div {
     /* background: pink; */
     float: inline-end;
   }
+}
+
+/* Normal Flow를 활용할 경우 */
+.bootcamp {
+  margin-block: 20px;
+  box-shadow: 0 0 0 10px green;
+  block-size: 200px;
+  inline-size: 400px;
+  text-align: center;
+  align-content: center;
+  /* line-height: 200px; */
 }
