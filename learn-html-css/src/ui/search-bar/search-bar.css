@@ -1,12 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+:root {
+  --green-100: #03cc5c;
+  --green-200: #1bf008;
+  --green-300: #03cca8;
+
+  --gray-100: #bcc3c7;
+  --gray-200: #9b9a90;
+  --gray-300: #6d7478;
+
+  --start-color: var(--green-200);
+  --end-color: var(--green-300);
+}
 body {
   margin: 50px;
 }
 /* 컴포넌트 스타일링 */
 /* 텍스트 로고 */
 .text-logo {
-  --start-color: #1bf008;
-  --end-color: #03cca8;
   --size: 34px;
 
   display: inline-flex;
@@ -90,4 +100,71 @@ button:disabled {
   }
 }
 
+/* 버튼 스타일링 (원형 그라디언트 버튼) */
+.circle-button {
+  --size: 1.5rem;
+
+  border: 0;
+  padding: 0;
+  background: var(--start-color) linear-gradient(-45deg, var(--end-color), var(--start-color));
+  inline-size: var(--size);
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+
+  &::before {
+    content: '';
+    inline-size: 40%;
+    block-size: 40%;
+    background: #fff;
+    border-radius: inherit;
+  }
+}
+
 /* 검색바 폼 스타일링 */
+.search-bar {
+  /* background: yellow; */
+  min-width: 320px;
+  border-radius: 50px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  border: 1px solid var(--green-100, #03cc5c);
+  padding: 12px 12px 12px 20px;
+
+  &:has(input:focus, input:hover) {
+    box-shadow: 0px 4px 4px 0px rgba(68, 131, 63, 0.15);
+  }
+
+  .logo {
+    flex-shrink: 0;
+    margin-right: 10px;
+  }
+
+  form {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    flex: 1;
+
+    .form-input {
+      width: 100%;
+      input {
+        border: 0;
+        outline: 0;
+        &::-webkit-search-cancel-button {
+          display: none;
+        }
+      }
+      margin-right: 14px;
+    }
+
+    .circle-button {
+      display: flex;
+      margin-left: auto;
+    }
+  }
+}
