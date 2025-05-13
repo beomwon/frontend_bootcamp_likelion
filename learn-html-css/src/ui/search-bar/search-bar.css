@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+body {
+  margin: 50px;
+}
+/* 컴포넌트 스타일링 */
+/* 텍스트 로고 */
+.text-logo {
+  display: block;
+
+  .text {
+    text-transform: uppercase;
+    font-size: 35px;
+    font-weight: 900;
+    font-family: 'Montserrat', sans-serif;
+    display: inline-block;
+    /* background: var(--gradient-100, linear-gradient(146deg, #1bf008 7.5%, #03cca8 94.17%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    background-image: var(--gradient-100, linear-gradient(146deg, #1bf008 7.5%, #03cca8 94.17%));
+    background-clip: text;
+    color: transparent;
+  }
+}
