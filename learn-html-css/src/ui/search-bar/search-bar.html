@@ -34,5 +34,22 @@
       <span aria-hidden="true" class="text">n</span>
       <span class="sr-only">네이버</span>
     </em>
+    <hr />
+    <h2>입력 서식 컴포넌트</h2>
+    <!-- 레이블 표시 -->
+    <div class="form-input"><label for="input-0">레이블</label><input type="text" id="input-0" name="input" required placeholder="입력 서식 힌트" /></div>
+
+    <hr />
+    <!-- 레이블 숨김 -->
+    <div class="form-input"><label for="input-0" class="sr-only">레이블</label><input type="text" id="input-0" name="input" required placeholder="입력 서식 힌트" /></div>
+
+    <hr />
+    <!-- 레이블 숨김 (상태 디자인) -->
+    <div class="form-input like-lion">
+      <label for="input-0" class="sr-only">레이블</label>
+      <input type="text" id="input-0" name="input" required placeholder="입력 서식 힌트" />
+    </div>
+    <hr />
+    <button type="button" disabled>버튼</button>
   </body>
 </html>
