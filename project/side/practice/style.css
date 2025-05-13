@@ -1,38 +1,62 @@
-.chat-bar {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
+body {
   display: flex;
-  padding: 10px;
-  background-color: #fff;
-  border-top: 1px solid #ddd;
-  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.05);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-
-.chat-bar__input {
-  flex: 1;
-  padding: 10px 14px;
-  border: 1px solid #ccc;
-  border-radius: 20px;
-  resize: none;
-  overflow: hidden;
-  font-size: 14px;
-  line-height: 18px;
-  max-height: 120px;
-}
-
-.chat-bar__button {
-  margin-left: 10px;
-  padding: 10px 16px;
-  background-color: #007bff;
+.post {
+  /* background: lightgray; */
+  border-radius: 8px;
+  width: 320px;
+  background: black;
   color: white;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  white-space: nowrap;
-}
+  padding: 10px 15px 10px 15px;
+  font-size: 0.8em;
 
-.chat-bar__button:hover {
-  background-color: #0056b3;
+  .post-header {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+
+    .nickname {
+      font-weight: 600;
+      color: white;
+    }
+
+    .time {
+      font-size: 0.9em;
+      margin-left: auto;
+      font-weight: 500;
+    }
+  }
+
+  .post-content {
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 10px;
+    max-height: 4.375em;
+  }
+
+  .post-footer {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    margin-top: 10px;
+
+    button {
+      font-size: 1.1em;
+      background: none;
+      border: none;
+      color: White;
+      cursor: pointer;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .share {
+      margin-left: auto;
+    }
+  }
 }

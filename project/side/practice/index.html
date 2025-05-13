@@ -5,17 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title></title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+    />
   </head>
   <body>
-    <div class="window">
-      <div class="chat-bar">
-        <input
-          type="text"
-          class="chat-bar__input"
-          placeholder="메시지를 입력하세요..."
-        />
-        <button class="chat-bar__button">전송</button>
+    <header></header>
+    <div class="post">
+      <div class="post-header">
+        <div class="profile">
+          <i class="fa-solid fa-circle-user"></i>
+        </div>
+        <span class="nickname">멋쟁이 사자처럼</span>
+        <time class="time" datetime="2025-05-12T16:26:17">6분</time>
       </div>
+      <div class="post-content">안녕하세요, 멋쟁이 사자처럼입니다.</div>
+      <hr />
+      <div class="post-footer">
+        <button class="like">
+          <i class="fa-regular fa-heart"></i>
+        </button>
+        <button class="comment">
+          <i class="fa-regular fa-comments"></i>
+        </button>
+        <button class="bookmark">
+          <i class="fa-regular fa-bookmark"></i>
+        </button>
+        <button class="share">
+          <i class="fa-solid fa-arrow-up-from-bracket"></i>
+        </button>
+      </div>
+    </div>
+    <div class="footer">
+      <input type="text" class="write" />
     </div>
     <script src="script.js"></script>
   </body>

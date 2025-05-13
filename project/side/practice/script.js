@@ -1,6 +1,14 @@
-const textarea = document.querySelector(".chat-bar__input");
+document.addEventListener("DOMContentLoaded", function () {
+  const likeIcon = document.querySelector(".like i");
+  const bookmarkIcon = document.querySelector(".bookmark i");
 
-textarea.addEventListener("input", () => {
-  textarea.style.height = "auto";
-  textarea.style.height = textarea.scrollHeight + "px";
+  likeIcon.addEventListener("click", function () {
+    this.classList.toggle("fa-regular");
+    this.classList.toggle("fa-solid");
+  });
+
+  bookmarkIcon.addEventListener("click", function () {
+    this.classList.toggle("fa-regular");
+    this.classList.toggle("fa-solid");
+  });
 });
