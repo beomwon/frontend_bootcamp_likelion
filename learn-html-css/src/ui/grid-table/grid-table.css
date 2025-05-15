@@ -1,0 +1,51 @@
+body {
+  margin: 50px;
+  background: black;
+  color: white;
+}
+
+.grid-table {
+  background: #333;
+  margin-block: 20px;
+  font-size: 0.875rem;
+  /* min-inline-size: 530px; */
+  column-gap: 12px;
+  display: grid;
+  grid-template-columns: minmax(max-content, 1fr) minmax(max-content, 3fr) minmax(max-content, 1fr) minmax(max-content, 1fr);
+  grid-template-rows: repeat(3, 48px) auto;
+  align-items: center;
+
+  dt:last-of-type {
+    align-self: start;
+  }
+
+  > :is(dd, div):last-child {
+    align-self: start;
+    span {
+      display: block;
+    }
+    grid-column: span 3;
+  }
+}
+
+/* 내가 짠 코드 */
+/* .grid-table {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  padding: 5px;
+  dd {
+    grid-column: span 2;
+  }
+  dd:has(span) {
+    grid-column: span 4;
+    span {
+      display: block;
+    }
+  }
+  dt,
+  dd {
+    border-bottom: 1px solid #ddd;
+  }
+} */
