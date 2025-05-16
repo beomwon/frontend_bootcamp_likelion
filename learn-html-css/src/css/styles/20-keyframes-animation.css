@@ -3,6 +3,30 @@ body {
   margin: 50px;
 }
 
+.container {
+  display: grid;
+  height: minmax(1fr, 133px);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  strong {
+    margin-right: 5px;
+  }
+  .case {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+    align-items: center;
+  }
+  .target-animation {
+    width: 100%;
+  }
+}
+
+.button {
+  border-radius: 8px;
+  border: 0;
+  padding: 5px 10px;
+}
+
 /* 키프레임 규칙 */
 @keyframes zoom {
   from {
@@ -66,6 +90,36 @@ body {
 /* Bounce 애니메이션 */
 .shake .target-animation {
   /* position: relative; */
-  animation: shake 1px;
-  animation-play-state: running;
+  animation: shake 2s infinite ease-in-out alternate;
+  animation-play-state: paused;
+}
+
+/* Spin 애니메이션 */
+.spin .target-animation {
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: conic-gradient(red, green, blue, yellow, pink, red);
+  animation: spin 1s infinite linear;
+  animation-play-state: paused;
+}
+
+/* Pulse 애니메이션 */
+.pulse .target-animation {
+  animation: pulse 1s infinite ease-in-out alternate;
+  animation-play-state: paused;
+}
+
+/* Flip 애니메이션 */
+.flip {
+  perspective: 500px;
+  .target-animation {
+    animation: flip 1s infinite ease-in-out;
+    animation-play-state: paused;
+  }
+}
+
+/* Flip 애니메이션 */
+.wobble .target-animation {
+  animation: wobble 1s infinite ease-in-out;
+  animation-play-state: paused;
 }
