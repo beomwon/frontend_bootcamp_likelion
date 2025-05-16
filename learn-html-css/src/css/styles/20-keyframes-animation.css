@@ -1,0 +1,71 @@
+/* 키프레임 애니메이션 */
+body {
+  margin: 50px;
+}
+
+/* 키프레임 규칙 */
+@keyframes zoom {
+  from {
+    width: 100px;
+    background: yellow;
+  }
+
+  100% {
+    width: 200px;
+    background: pink;
+  }
+}
+
+/* 애니메이션 속성 학습을 위한 예제 */
+.like {
+  border: 5px solid currentColor;
+  padding: 10px;
+  width: 100px;
+  /* animation-name: zoom;
+  animation-duration: 5s;
+  animation-iteration-count: 2;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  animation-delay: 1s;
+  animation-fill-mode: both;
+  animation-play-state: paused; */
+  animation: zoom 5s 1s 3 alternate ease-in-out forwards paused;
+}
+
+/* 공통스타일 (.case) */
+.case .target-animation {
+  border-radius: 8px;
+  padding: 1em;
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: var(--dark-blue);
+  color: var(--white);
+  text-align: center;
+  margin-block: 15px;
+}
+
+/* Fade 애니메이션 */
+.fade .target-animation {
+  animation: fade 3s infinite linear;
+  animation-play-state: paused;
+}
+
+/* Fade 애니메이션 */
+.shrink .target-animation {
+  animation: shrink 2s infinite ease-in-out;
+  animation-play-state: paused;
+}
+
+/* Bounce 애니메이션 */
+.bounce .target-animation {
+  /* position: relative; */
+  animation: bounce 2s infinite ease-in-out;
+  animation-play-state: paused;
+}
+
+/* Bounce 애니메이션 */
+.shake .target-animation {
+  /* position: relative; */
+  animation: shake 1px;
+  animation-play-state: running;
+}
